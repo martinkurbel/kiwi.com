@@ -44,6 +44,7 @@
 		DD29099E2469B90300D9F197 /* General */ = {
 			isa = PBXGroup;
 			children = (
+				DD29099F2469B94700D9F197 /* KILabel.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -83,7 +84,6 @@
 			isa = PBXGroup;
 			children = (
 				DD56549E2469AC9900AB5362 /* UIView.swift */,
-				DD29099F2469B94700D9F197 /* KILabel.swift */,
 				DD2909A12469BBE500D9F197 /* NSObject.swift */,
 			);
 			path = Extensions;

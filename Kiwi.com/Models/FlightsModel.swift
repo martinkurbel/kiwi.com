@@ -1,5 +1,5 @@
 //
-//  Flights.swift
+//  FlightsModel.swift
 //  Kiwi.com
 //
 //  Created by Martin Kurbel on 12/05/2020.
@@ -8,10 +8,10 @@
 
 import Foundation
 
-// MARK: - Flights
-struct Flights: Codable {
+// MARK: - Flights Model
+struct FlightsModel: Codable {
     let searchID: String
-    let data: [Flight]
+    let flights: [Flight]
     let connections: [String]
     let time: Int
     let currency: String
@@ -25,7 +25,8 @@ struct Flights: Codable {
 
     enum CodingKeys: String, CodingKey {
         case searchID = "search_id"
-        case data, connections, time, currency
+        case flights = "data"
+        case connections, time, currency
         case currencyRate = "currency_rate"
         case fxRate = "fx_rate"
         case refresh, del

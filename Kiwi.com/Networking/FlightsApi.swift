@@ -16,20 +16,20 @@ class FlightsApi {
         var path: String {
             switch self {
             case .getFlights(let flyFrom, let dateFrom, let dateTo, let limit):
-                return "flights?v=3&sort=popularity&locale=en&flyFrom=\(flyFrom)&to=anywhere&dateFrom=\(dateFrom)&dateTo=\(dateTo)&typeFlight=oneway&one_per_date=0&adults=1&limit=\(limit)&partner=picky"
+                return "flights?v=3&sort=popularity&locale=en&flyFrom=\(flyFrom)&to=anywhere&dateFrom=\(dateFrom)&dateTo=\(dateTo)&typeFlight=oneway&adults=1&limit=\(limit)&partner=picky"
             }
         }
     }
     
     private let api = APIService()
     
-    func getFlights(flyFrom: String, dateFrom: String, dateTo: String, limit: Int, completion: @escaping (Result<Flights, Error>) -> Void) {
+    func getFlights(flyFrom: String, dateFrom: String, dateTo: String, limit: Int, completion: @escaping (Result<FlightsModel, Error>) -> Void) {
         
         api.request(with: FlightsPath.getFlights(flyFrom, dateFrom, dateTo, limit)) { (response) in
             switch response {
             case .success(let data):
                 do {
-                    let flights = try JSONDecoder().decode(Flights.self, from: data)
+                    let flights = try JSONDecoder().decode(FlightsModel.self, from: data)
                     completion(.success(flights))
                 } catch(let error) {
                     print("---Error", error)

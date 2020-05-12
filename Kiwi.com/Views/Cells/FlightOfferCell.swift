@@ -14,7 +14,13 @@ class FlightOfferCell: UICollectionViewCell {
         static let offset: CGFloat = 16
     }
     
-    let coverImage = UIImageView()
+    var flight: Flight? = nil {
+        didSet {
+            setupContet()
+        }
+    }
+    
+    private let coverImage = UIImageView()
     private let titleLabel = KILabel(style: .semibold ,size: 22)
     private let priceLabel = KILabel(style: .semibold, size: 22, align: .right)
     private let descriptionLabel = KILabel()
@@ -72,5 +78,15 @@ class FlightOfferCell: UICollectionViewCell {
             descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: Sizes.offset),
             descriptionLabel.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -Sizes.offset),
         ])
+    }
+    
+    private func setupContet() {
+        
+        guard let flight = flight else { return }
+        
+        //Fix me
+        priceLabel.text = "\(flight.price) €"
+        titleLabel.text = flight.cityTo
+        descriptionLabel.text = "Duration: \(flight.duration.total)"
     }
 }

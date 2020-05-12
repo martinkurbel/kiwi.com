@@ -15,6 +15,11 @@
 		DD56548A24648CE400AB5362 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD56548824648CE400AB5362 /* LaunchScreen.storyboard */; };
 		DD56549F2469AC9900AB5362 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD56549E2469AC9900AB5362 /* UIView.swift */; };
 		DD5654A22469B5D800AB5362 /* FlightOfferCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5654A12469B5D600AB5362 /* FlightOfferCell.swift */; };
+		DDB7723B246AA9F4003CE49D /* Flights.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB7723A246AA9F4003CE49D /* Flights.swift */; };
+		DDB7723D246AACA8003CE49D /* JSONHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB7723C246AACA8003CE49D /* JSONHelpers.swift */; };
+		DDB77240246ABDAD003CE49D /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB7723F246ABDAD003CE49D /* APIService.swift */; };
+		DDB77242246AFB98003CE49D /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB77241246AFB98003CE49D /* Request.swift */; };
+		DDB77244246AFDC1003CE49D /* FlightsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB77243246AFDC1003CE49D /* FlightsApi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +33,11 @@
 		DD56548B24648CE400AB5362 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD56549E2469AC9900AB5362 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		DD5654A12469B5D600AB5362 /* FlightOfferCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightOfferCell.swift; sourceTree = "<group>"; };
+		DDB7723A246AA9F4003CE49D /* Flights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flights.swift; sourceTree = "<group>"; };
+		DDB7723C246AACA8003CE49D /* JSONHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONHelpers.swift; sourceTree = "<group>"; };
+		DDB7723F246ABDAD003CE49D /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		DDB77241246AFB98003CE49D /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		DDB77243246AFDC1003CE49D /* FlightsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsApi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				DD29099F2469B94700D9F197 /* KILabel.swift */,
+				DDB77241246AFB98003CE49D /* Request.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -71,6 +82,8 @@
 				DD56547D24648CDE00AB5362 /* AppDelegate.swift */,
 				DD56548124648CDE00AB5362 /* ViewController.swift */,
 				DD5654A02469B5C800AB5362 /* Views */,
+				DDB7723E246AAF92003CE49D /* Networking */,
+				DDB77239246AA9C9003CE49D /* Models */,
 				DD29099E2469B90300D9F197 /* General */,
 				DD56549D2469AC8100AB5362 /* Extensions */,
 				DD56548624648CE400AB5362 /* Assets.xcassets */,
@@ -103,6 +116,24 @@
 				DD5654A12469B5D600AB5362 /* FlightOfferCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		DDB77239246AA9C9003CE49D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DDB7723A246AA9F4003CE49D /* Flights.swift */,
+				DDB7723C246AACA8003CE49D /* JSONHelpers.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DDB7723E246AAF92003CE49D /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				DDB7723F246ABDAD003CE49D /* APIService.swift */,
+				DDB77243246AFDC1003CE49D /* FlightsApi.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,10 +208,15 @@
 			files = (
 				DD56548224648CDE00AB5362 /* ViewController.swift in Sources */,
 				DD2909A02469B94700D9F197 /* KILabel.swift in Sources */,
+				DDB7723D246AACA8003CE49D /* JSONHelpers.swift in Sources */,
 				DD5654A22469B5D800AB5362 /* FlightOfferCell.swift in Sources */,
 				DD2909A22469BBE500D9F197 /* NSObject.swift in Sources */,
+				DDB77244246AFDC1003CE49D /* FlightsApi.swift in Sources */,
 				DD56549F2469AC9900AB5362 /* UIView.swift in Sources */,
 				DD56547E24648CDE00AB5362 /* AppDelegate.swift in Sources */,
+				DDB77242246AFB98003CE49D /* Request.swift in Sources */,
+				DDB77240246ABDAD003CE49D /* APIService.swift in Sources */,
+				DDB7723B246AA9F4003CE49D /* Flights.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

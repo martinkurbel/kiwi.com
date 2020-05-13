@@ -55,7 +55,7 @@ struct Flight: Codable {
     let pnrCount: Int
     let hasAirportChange: Bool
     let technicalStops, price: Int
-    let bagsPrice: [String: Int]
+    let bagsPrice: [String: Double]
     let baglimit: Baglimit
     let availability: Availability
     let facilitatedBookingAvailable: Bool

@@ -20,6 +20,8 @@
 		DDB77240246ABDAD003CE49D /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB7723F246ABDAD003CE49D /* APIService.swift */; };
 		DDB77242246AFB98003CE49D /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB77241246AFB98003CE49D /* Request.swift */; };
 		DDB77244246AFDC1003CE49D /* FlightsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB77243246AFDC1003CE49D /* FlightsApi.swift */; };
+		DDB77246246BEACE003CE49D /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB77245246BEACE003CE49D /* UIImageView.swift */; };
+		DDB77248246BEB13003CE49D /* AppContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB77247246BEB13003CE49D /* AppContext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		DDB7723F246ABDAD003CE49D /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		DDB77241246AFB98003CE49D /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		DDB77243246AFDC1003CE49D /* FlightsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsApi.swift; sourceTree = "<group>"; };
+		DDB77245246BEACE003CE49D /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		DDB77247246BEB13003CE49D /* AppContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContext.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				DD56547D24648CDE00AB5362 /* AppDelegate.swift */,
+				DDB77247246BEB13003CE49D /* AppContext.swift */,
 				DD56548124648CDE00AB5362 /* ViewController.swift */,
 				DD5654A02469B5C800AB5362 /* Views */,
 				DDB7723E246AAF92003CE49D /* Networking */,
@@ -98,6 +103,7 @@
 			children = (
 				DD56549E2469AC9900AB5362 /* UIView.swift */,
 				DD2909A12469BBE500D9F197 /* NSObject.swift */,
+				DDB77245246BEACE003CE49D /* UIImageView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -210,10 +216,12 @@
 				DD2909A02469B94700D9F197 /* KILabel.swift in Sources */,
 				DDB7723D246AACA8003CE49D /* JSONHelpers.swift in Sources */,
 				DD5654A22469B5D800AB5362 /* FlightOfferCell.swift in Sources */,
+				DDB77246246BEACE003CE49D /* UIImageView.swift in Sources */,
 				DD2909A22469BBE500D9F197 /* NSObject.swift in Sources */,
 				DDB77244246AFDC1003CE49D /* FlightsApi.swift in Sources */,
 				DD56549F2469AC9900AB5362 /* UIView.swift in Sources */,
 				DD56547E24648CDE00AB5362 /* AppDelegate.swift in Sources */,
+				DDB77248246BEB13003CE49D /* AppContext.swift in Sources */,
 				DDB77242246AFB98003CE49D /* Request.swift in Sources */,
 				DDB77240246ABDAD003CE49D /* APIService.swift in Sources */,
 				DDB7723B246AA9F4003CE49D /* FlightsModel.swift in Sources */,

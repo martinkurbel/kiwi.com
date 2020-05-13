@@ -26,4 +26,9 @@ extension UIView {
     var y: CGFloat {
         return frame.origin.y
     }
+    
+    // MARK: NO Autoresizing Mask
+    func notAutoresizingMask() {
+        self.translatesAutoresizingMaskIntoConstraints = false
+    }
 }

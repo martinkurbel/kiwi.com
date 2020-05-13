@@ -24,6 +24,9 @@
 		DDB77248246BEB13003CE49D /* AppContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB77247246BEB13003CE49D /* AppContext.swift */; };
 		DDB7724A246BF8B6003CE49D /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB77249246BF8B6003CE49D /* Flight.swift */; };
 		DDB7724C246BFB89003CE49D /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB7724B246BFB89003CE49D /* Date.swift */; };
+		DDB7724E246C0AFA003CE49D /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB7724D246C0AFA003CE49D /* GradientView.swift */; };
+		DDB77250246C0DBB003CE49D /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB7724F246C0DBA003CE49D /* Color.swift */; };
+		DDB77252246C0DD7003CE49D /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB77251246C0DD7003CE49D /* UIColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +49,9 @@
 		DDB77247246BEB13003CE49D /* AppContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContext.swift; sourceTree = "<group>"; };
 		DDB77249246BF8B6003CE49D /* Flight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flight.swift; sourceTree = "<group>"; };
 		DDB7724B246BFB89003CE49D /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		DDB7724D246C0AFA003CE49D /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		DDB7724F246C0DBA003CE49D /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		DDB77251246C0DD7003CE49D /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,8 @@
 			children = (
 				DD29099F2469B94700D9F197 /* KILabel.swift */,
 				DDB77241246AFB98003CE49D /* Request.swift */,
+				DDB7724D246C0AFA003CE49D /* GradientView.swift */,
+				DDB7724F246C0DBA003CE49D /* Color.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -109,6 +117,7 @@
 				DD2909A12469BBE500D9F197 /* NSObject.swift */,
 				DDB77245246BEACE003CE49D /* UIImageView.swift */,
 				DDB7724B246BFB89003CE49D /* Date.swift */,
+				DDB77251246C0DD7003CE49D /* UIColor.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -222,13 +231,16 @@
 				DDB7724C246BFB89003CE49D /* Date.swift in Sources */,
 				DD2909A02469B94700D9F197 /* KILabel.swift in Sources */,
 				DDB7723D246AACA8003CE49D /* JSONHelpers.swift in Sources */,
+				DDB77250246C0DBB003CE49D /* Color.swift in Sources */,
 				DD5654A22469B5D800AB5362 /* FlightOfferCell.swift in Sources */,
 				DDB77246246BEACE003CE49D /* UIImageView.swift in Sources */,
+				DDB7724E246C0AFA003CE49D /* GradientView.swift in Sources */,
 				DD2909A22469BBE500D9F197 /* NSObject.swift in Sources */,
 				DDB77244246AFDC1003CE49D /* FlightsApi.swift in Sources */,
 				DD56549F2469AC9900AB5362 /* UIView.swift in Sources */,
 				DD56547E24648CDE00AB5362 /* AppDelegate.swift in Sources */,
 				DDB77248246BEB13003CE49D /* AppContext.swift in Sources */,
+				DDB77252246C0DD7003CE49D /* UIColor.swift in Sources */,
 				DDB77242246AFB98003CE49D /* Request.swift in Sources */,
 				DDB77240246ABDAD003CE49D /* APIService.swift in Sources */,
 				DDB7723B246AA9F4003CE49D /* FlightsModel.swift in Sources */,

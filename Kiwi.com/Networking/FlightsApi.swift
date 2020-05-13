@@ -16,7 +16,7 @@ class FlightsApi {
         var path: String {
             switch self {
             case .getFlights(let flyFrom, let dateFrom, let dateTo, let limit):
-                return "flights?v=3&sort=popularity&locale=en&flyFrom=\(flyFrom)&to=anywhere&dateFrom=\(dateFrom)&dateTo=\(dateTo)&typeFlight=oneway&adults=1&limit=\(limit)&partner=picky&one_for_city=1"
+                return "flights?v=3&sort=price&locale=en&flyFrom=\(flyFrom)&to=anywhere&dateFrom=\(dateFrom)&dateTo=\(dateTo)&typeFlight=oneway&adults=1&limit=\(limit)&partner=picky&one_for_city=1"
             }
         }
     }

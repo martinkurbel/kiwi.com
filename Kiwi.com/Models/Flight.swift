@@ -37,7 +37,7 @@ struct Flight: Codable {
     let p1, p2, p3: Int
     let transfers: [JSONAny]
     let typeFlights: [String]
-    let popularity: Int
+    let popularity: Double?
     let virtualInterlining: Bool
     let foundOn: [String]
     let route: [Route]

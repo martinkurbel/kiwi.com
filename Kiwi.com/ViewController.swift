@@ -30,9 +30,8 @@ class ViewController: UIViewController {
         self.view.backgroundColor  = .white
         self.title = "Flight offers"
         
-        setupViews()
         setupLocation()
-        getData()
+        setupViews()
     }
     
     private func setupViews() {
@@ -115,9 +114,15 @@ class ViewController: UIViewController {
         let today = Date()
         let dateFrom = today.dateForApi
         let dateTo = today.nextDayDate?.dateForApi ?? dateFrom
+        // Default location
+        var flyFrom = "europe"
+        let location = locationManager?.location?.coordinate
+        if let location = location {
+            flyFrom = "\(location.latitude.rounded(toPlaces: 4))-\(location.longitude.rounded(toPlaces: 4))-250km"
+        }
         
         weak var welf = self
-        AppContext.shared.api.getFlights(flyFrom: "48.26-17.75-500km", dateFrom: dateFrom, dateTo: dateTo, limit: AppContext.shared.offerLimit) { (result) in
+        AppContext.shared.api.getFlights(flyFrom: flyFrom, dateFrom: dateFrom, dateTo: dateTo, limit: AppContext.shared.offerLimit) { (result) in
             switch result {
             case .success(let flights):
                 welf?.flightsModel = flights
@@ -125,7 +130,9 @@ class ViewController: UIViewController {
                 print(error)
             }
             
-            welf?.activityIndicator.stopAnimating()
+            DispatchQueue.main.async {
+                welf?.activityIndicator.stopAnimating()
+            }
         }
     }
     
@@ -204,11 +211,13 @@ extension ViewController: CLLocationManagerDelegate {
             break
         case .authorizedWhenInUse:
             manager.startUpdatingLocation()
+            getData()
             break
         case .restricted:
             break
         case .denied:
             showNeedLocationAlert()
+            getData()
             break
         default:
             break

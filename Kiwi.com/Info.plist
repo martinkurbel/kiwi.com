@@ -24,6 +24,8 @@
 	<string>LaunchScreen</string>
 	<key>NSMainStoryboardFile</key>
 	<string></string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Please allow location so we can find best flight for your location</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

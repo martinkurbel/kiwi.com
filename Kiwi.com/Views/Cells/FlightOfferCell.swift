@@ -20,7 +20,8 @@ class FlightOfferCell: UICollectionViewCell {
         }
     }
     
-    private let coverImage = UIImageView()
+    private let coverView = CoverImageView()
+    
     private let titleLabel = KILabel(style: .semibold ,size: 22)
     private let priceLabel = KILabel(style: .semibold, size: 22, align: .right)
     private let descriptionLabel = KILabel()
@@ -37,42 +38,33 @@ class FlightOfferCell: UICollectionViewCell {
     
     private func setupViews() {
         
-        coverImage.contentMode = .scaleToFill
-        coverImage.backgroundColor = .yellow
-        
-        self.addSubview(coverImage)
-        coverImage.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(coverView)
+        coverView.notAutoresizingMask()
         NSLayoutConstraint.activate([
-            coverImage.leftAnchor.constraint(equalTo: self.leftAnchor),
-            coverImage.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
-            coverImage.rightAnchor.constraint(equalTo: self.rightAnchor),
-            coverImage.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 1/2)
+            coverView.leftAnchor.constraint(equalTo: self.leftAnchor),
+            coverView.topAnchor.constraint(equalTo: self.topAnchor),
+            coverView.rightAnchor.constraint(equalTo: self.rightAnchor),
+            coverView.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 2/3)
         ])
-        
-        titleLabel.text = "Berlin"
         
         self.addSubview(titleLabel)
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.notAutoresizingMask()
         NSLayoutConstraint.activate([
             titleLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: Sizes.offset),
-            titleLabel.topAnchor.constraint(equalTo: coverImage.bottomAnchor, constant: 32)
+            titleLabel.topAnchor.constraint(equalTo: coverView.bottomAnchor, constant: 32)
         ])
         
-        priceLabel.text = "100.00€"
-        
         self.addSubview(priceLabel)
-        priceLabel.translatesAutoresizingMaskIntoConstraints = false
+        priceLabel.notAutoresizingMask()
         NSLayoutConstraint.activate([
             priceLabel.widthAnchor.constraint(greaterThanOrEqualToConstant: 88),
             priceLabel.leftAnchor.constraint(equalTo: titleLabel.rightAnchor, constant: Sizes.offset),
-            priceLabel.topAnchor.constraint(equalTo: coverImage.bottomAnchor, constant: 32),
+            priceLabel.topAnchor.constraint(equalTo: coverView.bottomAnchor, constant: 32),
             priceLabel.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -Sizes.offset),
         ])
         
-        descriptionLabel.text = "Aasaf asfjaf asfjajsf ajf ajsf ajfsf afj asfja fs"
-        
         self.addSubview(descriptionLabel)
-        descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
+        descriptionLabel.notAutoresizingMask()
         NSLayoutConstraint.activate([
             descriptionLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: Sizes.offset),
             descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: Sizes.offset),
@@ -84,9 +76,11 @@ class FlightOfferCell: UICollectionViewCell {
         
         guard let flight = flight else { return }
         
+        coverView.flight = flight
+        
         //Fix me
         priceLabel.text = "\(flight.price) €"
-        titleLabel.text = flight.cityTo
-        descriptionLabel.text = "Duration: \(flight.duration.total)"
+        titleLabel.text = "\(flight.cityFrom) - \(flight.cityTo)"
+        descriptionLabel.text = "Duration: \(flight.duration.total/60), \(flight.flyDate)"
     }
 }

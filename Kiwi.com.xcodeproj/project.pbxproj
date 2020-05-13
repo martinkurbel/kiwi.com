@@ -27,6 +27,7 @@
 		DDB7724E246C0AFA003CE49D /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB7724D246C0AFA003CE49D /* GradientView.swift */; };
 		DDB77250246C0DBB003CE49D /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB7724F246C0DBA003CE49D /* Color.swift */; };
 		DDB77252246C0DD7003CE49D /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB77251246C0DD7003CE49D /* UIColor.swift */; };
+		DDB77254246C29C8003CE49D /* CoverImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB77253246C29C8003CE49D /* CoverImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		DDB7724D246C0AFA003CE49D /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		DDB7724F246C0DBA003CE49D /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		DDB77251246C0DD7003CE49D /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		DDB77253246C29C8003CE49D /* CoverImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				DD5654A32469B66700AB5362 /* Cells */,
+				DDB77253246C29C8003CE49D /* CoverImageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 				DD56549F2469AC9900AB5362 /* UIView.swift in Sources */,
 				DD56547E24648CDE00AB5362 /* AppDelegate.swift in Sources */,
 				DDB77248246BEB13003CE49D /* AppContext.swift in Sources */,
+				DDB77254246C29C8003CE49D /* CoverImageView.swift in Sources */,
 				DDB77252246C0DD7003CE49D /* UIColor.swift in Sources */,
 				DDB77242246AFB98003CE49D /* Request.swift in Sources */,
 				DDB77240246ABDAD003CE49D /* APIService.swift in Sources */,

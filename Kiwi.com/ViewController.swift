@@ -71,6 +71,8 @@ class ViewController: UIViewController {
         ])
         
         // actionButton Setup
+        actionButton.addTarget(self, action: #selector(openFlight), for: .touchUpInside)
+        
         actionButton.backgroundColor = Color.kiwiGreen
         actionButton.layer.masksToBounds = false
         actionButton.layer.cornerRadius = 8
@@ -151,6 +153,14 @@ class ViewController: UIViewController {
     
     private func openSettings() {
         if let url = URL(string: UIApplication.openSettingsURLString) {
+            UIApplication.shared.open(url)
+        }
+    }
+    
+    @objc private func openFlight() {
+        guard let index = collectionView.indexPathsForVisibleItems.first else { return }
+        guard let url = flightsModel?.flights[index.row].deepLink else { return }
+        if let url = URL(string: url) {
             UIApplication.shared.open(url)
         }
     }

@@ -26,7 +26,18 @@ class APIService {
                 print(error)
             }
             
-            if let data =  data {
+            if let response = response as? HTTPURLResponse {
+                
+                switch response.statusCode {
+                case 200..<204:
+                    break
+                default:
+                    completion(.failure(HTTPResponseError.internalError))
+                    print(error ?? "")
+                }
+            }
+            
+            if let data = data {
                 DispatchQueue.main.async {
                     completion(.success(data))
                 }
@@ -41,13 +52,6 @@ protocol APIPathComponent {
     var path: String { get }
 }
 
-extension Data
-{
-    func printJSON()
-    {
-        if let JSONString = String(data: self, encoding: String.Encoding.utf8)
-        {
-            print(JSONString)
-        }
-    }
+enum HTTPResponseError: Error {
+    case internalError
 }

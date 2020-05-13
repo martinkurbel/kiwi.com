@@ -15,4 +15,7 @@ class AppContext {
     let api = FlightsApi()
     
     let imageCache = NSCache<NSString, AnyObject>()
+    
+    // Limit for offers per day
+    let offerLimit = 5
 }

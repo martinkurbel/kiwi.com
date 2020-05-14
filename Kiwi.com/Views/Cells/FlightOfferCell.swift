@@ -22,9 +22,11 @@ class FlightOfferCell: UICollectionViewCell {
     
     private let coverView = CoverImageView()
     
-    private let titleLabel = KILabel(style: .semibold ,size: 22)
     private let priceLabel = KILabel(style: .semibold, size: 22, align: .right)
-    private let descriptionLabel = KILabel()
+    private let fromLabels = TwoLabelsView()
+    private let arrowIcon = UIImageView()
+    private let durationLabel = KILabel(size: 14)
+    private let toLabels = TwoLabelsView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -47,28 +49,45 @@ class FlightOfferCell: UICollectionViewCell {
             coverView.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 2/3)
         ])
         
-        self.addSubview(titleLabel)
-        titleLabel.noAutoresizingMask()
+        self.addSubview(fromLabels)
+        fromLabels.noAutoresizingMask()
         NSLayoutConstraint.activate([
-            titleLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: Sizes.offset),
-            titleLabel.topAnchor.constraint(equalTo: coverView.bottomAnchor, constant: 32)
+            fromLabels.leftAnchor.constraint(equalTo: self.leftAnchor),
+            fromLabels.topAnchor.constraint(equalTo: coverView.bottomAnchor, constant: Sizes.offset)
+        ])
+        
+        arrowIcon.image = UIImage(named: "arrowDown")
+        self.addSubview(arrowIcon)
+        arrowIcon.noAutoresizingMask()
+        NSLayoutConstraint.activate([
+            arrowIcon.widthAnchor.constraint(equalToConstant: 16),
+            arrowIcon.heightAnchor.constraint(equalToConstant: 24),
+            arrowIcon.leftAnchor.constraint(equalTo: self.leftAnchor, constant: Sizes.offset),
+            arrowIcon.topAnchor.constraint(equalTo: fromLabels.bottomAnchor, constant: Sizes.offset)
+        ])
+        
+        self.addSubview(durationLabel)
+        durationLabel.noAutoresizingMask()
+        NSLayoutConstraint.activate([
+            durationLabel.leftAnchor.constraint(equalTo: arrowIcon.rightAnchor, constant: Sizes.offset),
+            durationLabel.topAnchor.constraint(equalTo: fromLabels.bottomAnchor, constant: 20),
+        ])
+        
+        self.addSubview(toLabels)
+        toLabels.noAutoresizingMask()
+        NSLayoutConstraint.activate([
+            toLabels.leftAnchor.constraint(equalTo: self.leftAnchor),
+            toLabels.rightAnchor.constraint(equalTo: self.rightAnchor),
+            toLabels.topAnchor.constraint(equalTo: durationLabel.bottomAnchor, constant: Sizes.offset)
         ])
         
         self.addSubview(priceLabel)
         priceLabel.noAutoresizingMask()
         NSLayoutConstraint.activate([
             priceLabel.widthAnchor.constraint(greaterThanOrEqualToConstant: 88),
-            priceLabel.leftAnchor.constraint(equalTo: titleLabel.rightAnchor, constant: Sizes.offset),
-            priceLabel.topAnchor.constraint(equalTo: coverView.bottomAnchor, constant: 32),
+            priceLabel.leftAnchor.constraint(equalTo: fromLabels.rightAnchor, constant: Sizes.offset),
+            priceLabel.topAnchor.constraint(equalTo: coverView.bottomAnchor, constant: Sizes.offset),
             priceLabel.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -Sizes.offset),
-        ])
-        
-        self.addSubview(descriptionLabel)
-        descriptionLabel.noAutoresizingMask()
-        NSLayoutConstraint.activate([
-            descriptionLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: Sizes.offset),
-            descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: Sizes.offset),
-            descriptionLabel.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -Sizes.offset),
         ])
     }
     
@@ -79,8 +98,11 @@ class FlightOfferCell: UICollectionViewCell {
         coverView.flight = flight
         
         //Fix me
-        priceLabel.text = "\(flight.price) €"
-        titleLabel.text = "\(flight.cityFrom) - \(flight.cityTo)"
-        descriptionLabel.text = "Duration: \(flight.flyDuration), \(flight.flyDate)"
+        priceLabel.text = flight.totalPrice
+        fromLabels.firstText = "\(flight.cityFrom) - \(flight.flyFrom)"
+        fromLabels.secondText = flight.dDateAndTime
+        toLabels.firstText = "\(flight.cityTo) - \(flight.flyTo)"
+        toLabels.secondText = flight.aDateAndTime
+        durationLabel.text = "\(flight.flyDuration) - \(flight.route.count)"
     }
 }

@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let _ = AppContext()
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        let vc = ViewController()
+        let vc = FlightsViewController()
         let nc = UINavigationController(rootViewController: vc)
         window?.rootViewController = nc
         window?.makeKeyAndVisible()

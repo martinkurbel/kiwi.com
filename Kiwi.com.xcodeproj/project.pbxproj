@@ -10,7 +10,7 @@
 		DD2909A02469B94700D9F197 /* KILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD29099F2469B94700D9F197 /* KILabel.swift */; };
 		DD2909A22469BBE500D9F197 /* NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2909A12469BBE500D9F197 /* NSObject.swift */; };
 		DD56547E24648CDE00AB5362 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD56547D24648CDE00AB5362 /* AppDelegate.swift */; };
-		DD56548224648CDE00AB5362 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD56548124648CDE00AB5362 /* ViewController.swift */; };
+		DD56548224648CDE00AB5362 /* FlightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD56548124648CDE00AB5362 /* FlightsViewController.swift */; };
 		DD56548724648CE400AB5362 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD56548624648CE400AB5362 /* Assets.xcassets */; };
 		DD56548A24648CE400AB5362 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD56548824648CE400AB5362 /* LaunchScreen.storyboard */; };
 		DD56549F2469AC9900AB5362 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD56549E2469AC9900AB5362 /* UIView.swift */; };
@@ -37,7 +37,7 @@
 		DD2909A12469BBE500D9F197 /* NSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObject.swift; sourceTree = "<group>"; };
 		DD56547A24648CDE00AB5362 /* Kiwi.com.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kiwi.com.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD56547D24648CDE00AB5362 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DD56548124648CDE00AB5362 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DD56548124648CDE00AB5362 /* FlightsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsViewController.swift; sourceTree = "<group>"; };
 		DD56548624648CE400AB5362 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD56548924648CE400AB5362 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD56548B24648CE400AB5362 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -103,7 +103,7 @@
 			children = (
 				DD56547D24648CDE00AB5362 /* AppDelegate.swift */,
 				DDB77247246BEB13003CE49D /* AppContext.swift */,
-				DD56548124648CDE00AB5362 /* ViewController.swift */,
+				DD56548124648CDE00AB5362 /* FlightsViewController.swift */,
 				DD5654A02469B5C800AB5362 /* Views */,
 				DDB7723E246AAF92003CE49D /* Networking */,
 				DDB77239246AA9C9003CE49D /* Models */,
@@ -236,7 +236,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD56548224648CDE00AB5362 /* ViewController.swift in Sources */,
+				DD56548224648CDE00AB5362 /* FlightsViewController.swift in Sources */,
 				DDB7724C246BFB89003CE49D /* Date.swift in Sources */,
 				DD2909A02469B94700D9F197 /* KILabel.swift in Sources */,
 				DDB7723D246AACA8003CE49D /* JSONHelpers.swift in Sources */,

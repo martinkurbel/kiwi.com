@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  FlightsViewController.swift
 //  Kiwi.com
 //
 //  Created by Martin Kurbel on 07/05/2020.
@@ -9,7 +9,7 @@
 import UIKit
 import CoreLocation
 
-class ViewController: UIViewController {
+class FlightsViewController: UIViewController {
     
     private let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewFlowLayout())
     
@@ -167,7 +167,7 @@ class ViewController: UIViewController {
 }
 
 // MARK: UICollectionViewDelegate
-extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension FlightsViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return flightsModel?.flights.count ?? 0
@@ -193,7 +193,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
 }
 
 // MARK: UIScrollViewDelegate
-extension ViewController: UIScrollViewDelegate {
+extension FlightsViewController: UIScrollViewDelegate {
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         self.stoppedScrolling(scrollView)
@@ -212,7 +212,7 @@ extension ViewController: UIScrollViewDelegate {
 }
 
 // MARK: CLLocationManagerDelegate
-extension ViewController: CLLocationManagerDelegate {
+extension FlightsViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         switch status {

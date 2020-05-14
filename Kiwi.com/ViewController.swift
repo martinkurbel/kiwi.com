@@ -53,7 +53,7 @@ class ViewController: UIViewController {
         self.view.addSubview(actionButton)
         self.view.addSubview(pageControl)
         
-        collectionView.notAutoresizingMask()
+        collectionView.noAutoresizingMask()
         NSLayoutConstraint.activate([
             collectionView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
@@ -64,7 +64,7 @@ class ViewController: UIViewController {
         // activityIndicator Setup
         
         collectionView.addSubview(activityIndicator)
-        activityIndicator.notAutoresizingMask()
+        activityIndicator.noAutoresizingMask()
         NSLayoutConstraint.activate([
             activityIndicator.centerYAnchor.constraint(equalTo: collectionView.centerYAnchor),
             activityIndicator.centerXAnchor.constraint(equalTo: collectionView.centerXAnchor)
@@ -80,7 +80,7 @@ class ViewController: UIViewController {
         actionButton.setTitleColor(.white, for: .normal)
         actionButton.setTitle("Let's explore", for: .normal)
         
-        actionButton.notAutoresizingMask()
+        actionButton.noAutoresizingMask()
         NSLayoutConstraint.activate([
             actionButton.heightAnchor.constraint(equalToConstant: 44),
             actionButton.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 16),
@@ -93,9 +93,9 @@ class ViewController: UIViewController {
         pageControl.currentPageIndicatorTintColor = .black
         pageControl.numberOfPages = 5
         pageControl.currentPage = 0
-        pageControl.notAutoresizingMask()
+        pageControl.noAutoresizingMask()
         
-        pageControl.notAutoresizingMask()
+        pageControl.noAutoresizingMask()
         NSLayoutConstraint.activate([
             pageControl.topAnchor.constraint(equalTo: actionButton.bottomAnchor),
             pageControl.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),

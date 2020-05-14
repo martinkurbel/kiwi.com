@@ -39,7 +39,7 @@ class FlightOfferCell: UICollectionViewCell {
     private func setupViews() {
         
         self.addSubview(coverView)
-        coverView.notAutoresizingMask()
+        coverView.noAutoresizingMask()
         NSLayoutConstraint.activate([
             coverView.leftAnchor.constraint(equalTo: self.leftAnchor),
             coverView.topAnchor.constraint(equalTo: self.topAnchor),
@@ -48,14 +48,14 @@ class FlightOfferCell: UICollectionViewCell {
         ])
         
         self.addSubview(titleLabel)
-        titleLabel.notAutoresizingMask()
+        titleLabel.noAutoresizingMask()
         NSLayoutConstraint.activate([
             titleLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: Sizes.offset),
             titleLabel.topAnchor.constraint(equalTo: coverView.bottomAnchor, constant: 32)
         ])
         
         self.addSubview(priceLabel)
-        priceLabel.notAutoresizingMask()
+        priceLabel.noAutoresizingMask()
         NSLayoutConstraint.activate([
             priceLabel.widthAnchor.constraint(greaterThanOrEqualToConstant: 88),
             priceLabel.leftAnchor.constraint(equalTo: titleLabel.rightAnchor, constant: Sizes.offset),
@@ -64,7 +64,7 @@ class FlightOfferCell: UICollectionViewCell {
         ])
         
         self.addSubview(descriptionLabel)
-        descriptionLabel.notAutoresizingMask()
+        descriptionLabel.noAutoresizingMask()
         NSLayoutConstraint.activate([
             descriptionLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: Sizes.offset),
             descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: Sizes.offset),
@@ -81,6 +81,6 @@ class FlightOfferCell: UICollectionViewCell {
         //Fix me
         priceLabel.text = "\(flight.price) €"
         titleLabel.text = "\(flight.cityFrom) - \(flight.cityTo)"
-        descriptionLabel.text = "Duration: \(flight.duration.total/60), \(flight.flyDate)"
+        descriptionLabel.text = "Duration: \(flight.flyDuration), \(flight.flyDate)"
     }
 }

@@ -28,7 +28,7 @@ extension UIView {
     }
     
     // MARK: NO Autoresizing Mask
-    func notAutoresizingMask() {
+    func noAutoresizingMask() {
         self.translatesAutoresizingMaskIntoConstraints = false
     }
     

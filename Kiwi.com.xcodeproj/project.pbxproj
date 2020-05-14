@@ -16,6 +16,7 @@
 		DD56549F2469AC9900AB5362 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD56549E2469AC9900AB5362 /* UIView.swift */; };
 		DD5654A22469B5D800AB5362 /* FlightOfferCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5654A12469B5D600AB5362 /* FlightOfferCell.swift */; };
 		DD6007A9246C580E0092E757 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6007A8246C580E0092E757 /* Double.swift */; };
+		DD6007B3246D39090092E757 /* TwoLabelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6007B2246D39090092E757 /* TwoLabelsView.swift */; };
 		DDB7723B246AA9F4003CE49D /* FlightsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB7723A246AA9F4003CE49D /* FlightsModel.swift */; };
 		DDB7723D246AACA8003CE49D /* JSONHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB7723C246AACA8003CE49D /* JSONHelpers.swift */; };
 		DDB77240246ABDAD003CE49D /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB7723F246ABDAD003CE49D /* APIService.swift */; };
@@ -43,6 +44,7 @@
 		DD56549E2469AC9900AB5362 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		DD5654A12469B5D600AB5362 /* FlightOfferCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightOfferCell.swift; sourceTree = "<group>"; };
 		DD6007A8246C580E0092E757 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		DD6007B2246D39090092E757 /* TwoLabelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoLabelsView.swift; sourceTree = "<group>"; };
 		DDB7723A246AA9F4003CE49D /* FlightsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsModel.swift; sourceTree = "<group>"; };
 		DDB7723C246AACA8003CE49D /* JSONHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONHelpers.swift; sourceTree = "<group>"; };
 		DDB7723F246ABDAD003CE49D /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 			children = (
 				DD5654A32469B66700AB5362 /* Cells */,
 				DDB77253246C29C8003CE49D /* CoverImageView.swift */,
+				DD6007B2246D39090092E757 /* TwoLabelsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -148,8 +151,8 @@
 			isa = PBXGroup;
 			children = (
 				DDB7723A246AA9F4003CE49D /* FlightsModel.swift */,
-				DDB7723C246AACA8003CE49D /* JSONHelpers.swift */,
 				DDB77249246BF8B6003CE49D /* Flight.swift */,
+				DDB7723C246AACA8003CE49D /* JSONHelpers.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 				DD56547E24648CDE00AB5362 /* AppDelegate.swift in Sources */,
 				DDB77248246BEB13003CE49D /* AppContext.swift in Sources */,
 				DDB77254246C29C8003CE49D /* CoverImageView.swift in Sources */,
+				DD6007B3246D39090092E757 /* TwoLabelsView.swift in Sources */,
 				DDB77252246C0DD7003CE49D /* UIColor.swift in Sources */,
 				DDB77242246AFB98003CE49D /* Request.swift in Sources */,
 				DDB77240246ABDAD003CE49D /* APIService.swift in Sources */,

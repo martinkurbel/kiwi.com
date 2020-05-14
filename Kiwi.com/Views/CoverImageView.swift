@@ -37,14 +37,14 @@ class CoverImageView: UIView {
         coverImage.image = UIImage(named: "defaultImage")
         
         self.addSubview(coverImage)
-        coverImage.notAutoresizingMask()
+        coverImage.noAutoresizingMask()
         coverImage.pinEdges(to: self)
         
         gradientView.from = .clear
         gradientView.to = UIColor.black.withAlphaComponent(0.6)
         
         coverImage.addSubview(gradientView)
-        gradientView.notAutoresizingMask()
+        gradientView.noAutoresizingMask()
         NSLayoutConstraint.activate([
             gradientView.heightAnchor.constraint(equalToConstant: 80),
             gradientView.leftAnchor.constraint(equalTo: coverImage.leftAnchor),
@@ -53,7 +53,7 @@ class CoverImageView: UIView {
         ])
         
         coverImage.addSubview(destinationLabel)
-        destinationLabel.notAutoresizingMask()
+        destinationLabel.noAutoresizingMask()
         NSLayoutConstraint.activate([
             destinationLabel.leftAnchor.constraint(equalTo: coverImage.leftAnchor, constant: 8),
             destinationLabel.rightAnchor.constraint(equalTo: coverImage.rightAnchor, constant: -8),

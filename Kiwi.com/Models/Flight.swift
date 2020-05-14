@@ -66,10 +66,23 @@ struct Flight: Codable {
     }
     
     var flyDate: String {
-        
         let date = Date(timeIntervalSince1970: TimeInterval(dTime))
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
         return formatter.string(from: date)
+    }
+    
+    var dDateAndTime: String {
+        let date = Date(timeIntervalSince1970: TimeInterval(dTime))
+        return date.dateAndTimetoString(format: "d MMM yyyy - HH:mm")
+    }
+    
+    var aDateAndTime: String {
+        let date = Date(timeIntervalSince1970: TimeInterval(aTime))
+        return date.dateAndTimetoString(format: "d MMM yyyy - HH:mm")
+    }
+    
+    var totalPrice: String {
+        return "\(price) €"
     }
 }
